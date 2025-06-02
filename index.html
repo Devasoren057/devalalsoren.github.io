@@ -1,118 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome Devalal Soren</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devalal Soren - Home</title>
   <style>
     body {
-      background: #000;
-      color: #fff;
-      text-align: center;
       font-family: 'Segoe UI', sans-serif;
-      padding: 50px 10px;
-      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #ffcc00;
-      animation: glow 2s infinite alternate;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ff0, 0 0 20px #f90, 0 0 30px #f00; }
-      to { text-shadow: 0 0 20px #f90, 0 0 30px #ff0, 0 0 40px #f00; }
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .buttons button {
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 18px;
-      background: linear-gradient(45deg, #ff5500, #ffaa00);
-      border: none;
-      border-radius: 12px;
+    header {
+      background-color: #4CAF50;
       color: white;
-      cursor: pointer;
-      animation: bounce 2s infinite;
-      box-shadow: 0 0 10px #ff0;
+      padding: 20px;
+      text-align: center;
     }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
     }
-
-    .fireworks {
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      display: block;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #575757;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
       position: fixed;
-      top: 0; left: 0;
       width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .dot {
-      position: absolute;
-      border-radius: 50%;
-      background: yellow;
-      width: 8px;
-      height: 8px;
-      animation: explode 1.2s ease-out forwards;
-    }
-
-    @keyframes explode {
-      0% { transform: scale(0.5); opacity: 1; }
-      100% { transform: scale(3); opacity: 0; }
+      bottom: 0;
     }
   </style>
 </head>
 <body>
-
-  <h1>🎇 DEVALAL SOREN 🎇</h1>
-
-  <div class="buttons">
-    <button>🎂 Happy Birthday</button>
-    <button>🙏 Johar</button>
-    <button>🌟 Welcome</button>
+  <header>
+    <h1>Welcome to Devalal Soren's Website</h1>
+    <p>Simple Personal Web Project</p>
+  </header>  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>  <div class="container">
+    <h2>Home Page</h2>
+    <p>This is the home page of your personal website hosted on GitHub Pages. You can customize this page to include your introduction, projects, or anything else.</p>
+  </div>  <footer>
+    &copy; 2025 Devalal Soren | All Rights Reserved
+  </footer>
+</body>
+</html><!-- about.html --><!-- Save this in a separate file named about.html --><!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Devalal Soren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <p>Hi, I'm Devalal Soren. This is a basic personal website created to learn HTML and GitHub Pages. Here you can find my work, projects, and contact info.</p>
   </div>
-
-  <canvas class="fireworks"></canvas>
-
-  <script>
-    const canvas = document.querySelector('.fireworks');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    function random(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-
-    function createFirework() {
-      let x = random(0, canvas.width);
-      let y = random(0, canvas.height / 2);
-      for (let i = 0; i < 50; i++) {
-        const angle = Math.random() * 2 * Math.PI;
-        const radius = Math.random() * 50;
-        const dx = Math.cos(angle) * radius;
-        const dy = Math.sin(angle) * radius;
-        setTimeout(() => {
-          ctx.beginPath();
-          ctx.arc(x + dx, y + dy, 2, 0, 2 * Math.PI);
-          ctx.fillStyle = `hsl(${Math.random() * 360}, 100%, 60%)`;
-          ctx.fill();
-        }, i * 10);
-      }
-    }
-
-    setInterval(createFirework, 1000);
-  </script>
-
+  <footer>
+    &copy; 2025 Devalal Soren | All Rights Reserved
+  </footer>
 </body>
 </html>
+--><!-- contact.html --><!-- Save this in a separate file named contact.html --><!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Devalal Soren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <p>Email: devalal@example.com</p>
+    <p>GitHub: <a href="https://github.com/devasoren057">github.com/devasoren057</a></p>
+    <p>Location: Jharkhand, India</p>
+  </div>
+  <footer>
+    &copy; 2025 Devalal Soren | All Rights Reserved
+  </footer>
+</body>
+</html>
+-->
